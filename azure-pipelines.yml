@@ -68,8 +68,7 @@ stages:
   dependsOn: Build
   jobs:
   - deployment: Deploy
-    pool:
-      vmImage: 'ubuntu-20.04'
+    pool: Default
     environment: dev
     variables:
     - group: Release
@@ -91,8 +90,7 @@ stages:
   dependsOn: Dev
   jobs:
   - deployment: Deploy
-    pool:
-      vmImage: 'ubuntu-20.04'
+    pool: Default
     environment: test
     variables:
     - group: 'Release'
@@ -138,8 +136,7 @@ stages:
   dependsOn: Test
   jobs:
   - deployment: Deploy
-    pool:
-      vmImage: 'ubuntu-20.04'
+    pool: Default
     environment: staging
     variables:
     - group: 'Release'
