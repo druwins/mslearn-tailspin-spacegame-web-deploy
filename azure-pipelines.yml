@@ -77,9 +77,7 @@ stages:
     )
   jobs:
   - deployment: Deploy
-    pool:
-      vmImage: 'ubuntu-18.04'
-      selfHosted: 'true'
+    pool: Default
     environment: dev
     variables:
     - group: Release
