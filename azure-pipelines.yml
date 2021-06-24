@@ -79,6 +79,7 @@ stages:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-18.04'
+      selfHosted: 'true'
     environment: dev
     variables:
     - group: Release
